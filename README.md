@@ -1,5 +1,5 @@
-## Student Management System
+## stms 
 
-First small project using Laravel and php to manage student
+Hello BBU
 
-## By Oeng_Outeab
+## By Ngim Sochet
