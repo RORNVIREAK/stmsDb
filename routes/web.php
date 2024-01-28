@@ -37,6 +37,10 @@ Route::get('/student', function () {
     return view('layouts.student.student-list');
 });
 
+Route::get('student/add', function () {
+    return view('layouts.student.student-add');
+});
+
 // Route::post('student/create', [StudentController::class] {
 
 // };

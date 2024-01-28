@@ -1,72 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{-- <title>Document</title> --}}
-    <title> @yield('title','Students')</title>
+@extends('layouts.master')
+@section('title','Subject')
+@section('subject','active')
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<style>
-    body{
-        background: #9796f0; 
-        background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0); 
-        background: linear-gradient(to right, #fbc7d4, #9796f0); 
-    }
-    .container{
-        margin-top: 40px;
-    }
-    .conten{
-        height: 80vh;
-        width: 40%;
-        background-color: rgba(227, 228, 229, 0.497)
-    
-    }
-    h3{
-        text-align: center
-    }
-    h3:hover{
-        color: dodgerblue;
-    }
-</style>
+@section('content')
 
-<body>
-    <form action="">
-        <div class=" rounded-4 conten container p-4">
-            <h3>Student</h3>
-            <hr>    
-              <div class="mb-4">
-                <label for="exampleFormControlInput1" class="form-label">#</label>
-                <input type="text" class="form-control border-success"  placeholder="">
+          <h4 class="mb-3">Add</h4>
+          @if ($errors->any())
+          <ul class="alert alert-danger">
+              @foreach ($errors->all() as $error)
+              <LI>{{$error}}</LI>
+              @endforeach
+          </ul>
+          @endif
+          <form class="needs-validation" method="POST">
+            {{ csrf_field() }}
+            <div class="mb-3">
+              <label for="username">Code</label>
+                <input type="text" name="code" class="form-control" id="code" placeholder="Code">
               </div>
-    
-              <div class="mb-4">
-                <label for="exampleFormControlInput1" class="form-label">Full Name</label>
-                <input type="text" class="form-control border-success" placeholder="">
-              </div>
+          
 
-              <div class="mb-4">
-                <label for="exampleFormControlInput1" class="form-label">Date of Birth</label>
-                <input type="date" class="form-control border-success" placeholder="">
-              </div>
-
-              <div class="mb-4">
-                <label for="exampleFormControlInput1" class="form-label">Phone</label>
-                <input type="text" class="form-control border-success" placeholder="">
-              </div>
-              
-              <div class="mb-4">
-                <label for="exampleFormControlInput1" class="form-label">Subject</label>
-                <input type="text" class="  form-control border-success" placeholder="">
-              </div>
-
-              <div class="mb-4">
-                <button type="submit" class="btn btn-outline-success">Okey</button>
-                <button type="reset" class="btn btn-outline-danger">Clear</button>
-              </div>
+            <div class="mb-3">
+              <label for="name">Name</label>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="input-group">
+        <div class="input-group-prepend">
         </div>
-    </form>
-</body>
-</html>
+            </div>
+          <div class="mb-3">
+          <label for="note">Note</label>
+            
+        <textarea class="form-control" name="note" id="note" rows="3" ></textarea>
+        </div>
+            
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-sm btn-lg btn-block" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    
+</div>
+@endsection

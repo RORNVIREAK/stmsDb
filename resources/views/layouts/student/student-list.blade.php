@@ -3,7 +3,7 @@
 @section('student','active')
 @section('content')
     <div class="content-title">
-        <h3>Subject</h3>
+        <h3>Student List</h3>
         <div>
             <button type="button" class="btn btn-outline-primary"> <span data-feather="user-plus"></span> Add</button>
         </div>
@@ -13,7 +13,7 @@
   <div class="table-responsive">
     <table class="table table-striped table-sm">
       <thead>
-        <tr>
+        <tr style="text-align: center">
           <th>#</th>
           <th>FullName</th>
           <th>Gender</th>
@@ -24,7 +24,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr style="text-align: center">
           <td>1</td>
           <td>Sok</td>
           <td>Male</td>
