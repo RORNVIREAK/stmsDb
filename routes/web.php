@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,3 +36,7 @@ Route::prefix('/subject')->group(function(){
 Route::get('/student', function () {
     return view('layouts.student.student-list');
 });
+
+// Route::post('student/create', [StudentController::class] {
+
+// };
