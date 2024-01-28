@@ -26,11 +26,11 @@
       <tbody>
         <tr style="text-align: center">
           <td>1</td>
-          <td>Sok</td>
+          <td>Rorn Vireak</td>
           <td>Male</td>
-          <td>2024-21-1</td>
-          <td>0123456789</td>
-          <td>Math</td>
+          <td>2001-07-01</td>
+          <td>011704958</td>
+          <td>Hacker</td>
           <td class="btn-action"> 
             <a href="#"><span class="text-warning" data-feather="edit"></span>Edit</a>
             <a href="#"><span class="text-danger" data-feather="trash-2"></span>Delete</a> 

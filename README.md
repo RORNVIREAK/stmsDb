@@ -1,5 +1,5 @@
-## stms 
+## For Studens BBU
 
-Hello BBU
+Hello all pretty,handsome students and teachers !
 
-## By Ngim Sochet
+## Rorn Vireak
